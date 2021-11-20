@@ -1,0 +1,62 @@
+/* Buttons */
+.btn {
+	position: relative;
+	z-index:2;
+	padding: 14px 16px 10px;
+	border-radius: 0;
+	font-weight:500;
+	font-size: 13px;
+	letter-spacing: 0.04em;
+	border-width:1px;
+	box-shadow: none;
+	transition: all 0.4s;
+	text-transform: uppercase;
+
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: none;
+		outline:none !important;
+	}
+	
+	@media (min-width: $minmqxs) {
+		&.min-width {
+			min-width: 170px;
+			text-align: center;
+		}
+	}
+
+    i {
+    	vertical-align: middle;
+    }
+}
+
+/* Button Colors */
+.btn.btn-primary {
+	@include button(#fff,$primary-color);
+
+	&.btn-outline {
+		@include button-outline($primary-color, $primary-color);
+	}
+}
+
+.btn.btn-accent {
+	@include button(#fff,$accent-color);
+
+	&.btn-outline {
+		@include button-outline($accent-color, $accent-color);
+	}
+}
+
+.btn.btn-white {
+	@include button(#222, #fff);
+
+	&.btn-outline {
+		@include button-outline(#fff, #fff);
+
+		&:hover,
+	    &:focus {
+	        color: #222;
+	    }
+	}
+}

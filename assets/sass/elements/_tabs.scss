@@ -1,0 +1,119 @@
+/* Tabs */
+.nav.nav-tabs {
+    padding-bottom:0;
+    border-bottom-color: #e9e9ea;
+    margin-bottom: 25px;
+
+    > li {
+        margin-right: 25px;
+        margin-bottom: 0;
+
+        @media (min-width: $minmqsm) {
+            margin-right: 40px;
+        }
+
+         @media (min-width: $minmqmd) {
+            margin-right: 50px;
+        }
+
+        @media (max-width: $maxmqxs) {
+            float: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        + li {
+            margin-left:0;
+        }
+
+        > a {
+            position: relative;
+            padding:0 0 16px;
+            font: 400 18px/1.1 $second-font-family;
+            letter-spacing: 0.075em;
+            text-transform: uppercase;
+            color: $primary-color;
+            border: none !important;
+            border-radius:0;
+            background-color: transparent;
+            transition: color 0.35s; 
+
+             @media (max-width: $maxmqxs) {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+
+            &:before {
+                content:'';
+                position:absolute;
+                display:block;
+                left:50%;
+                right:50%;
+                height:2px;
+                bottom:-1px;
+                background-color: $accent-color;
+                visibility:hidden;
+                transition: all 0.4s;
+            }
+
+            &:hover {
+                color: $accent-color;
+                background-color: transparent;
+                border-color: transparent;
+            }
+        }
+
+        &.active {
+            a {
+                &,
+                &:hover,
+                &:focus {
+                    color: $primary-color;
+                    background-color: transparent;
+                    border-bottom-color: transparent;
+                }
+
+                &:before {
+                    visibility:visible;
+                    left:-1px;
+                    right:-1px;
+                }
+            }
+        }
+    }
+
+    &.text-right {
+        font-size: 0;
+        > li {
+            @media (min-width: $minmqxs) {
+                float: none;
+                display: inline-block;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            @media (max-width: $maxmqxs) {
+                margin-right:0;
+            }
+        }
+    }
+}
+
+.tab-content {
+    padding: 0;
+    font-size: 14px;
+    line-height: 2.36;
+
+    p {
+        margin-bottom: 20px;
+
+        @media (min-width: $minmqsm) {
+            margin-bottom: 30px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

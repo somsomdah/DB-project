@@ -1,0 +1,33 @@
+/* Breadcrumbs */
+.breadcrumb {
+	padding:18px 0;
+	margin:0;
+	background-color: transparent;
+	border-radius:0;
+	font-size: 13px;
+	line-height: 1.85;
+	font-weight:400;
+		
+	li {
+		a {
+			color: $primary-text-color;
+
+			&:hover,
+			&:focus {
+				color: $primary-color;
+			}
+		}
+	}
+
+	> .active {
+		color: $primary-text-color;
+	}
+
+	li + li {
+		&:before {
+			color: $primary-text-color;
+			content: "/";
+			padding:0 13px 0 7px;
+		}
+	}
+}

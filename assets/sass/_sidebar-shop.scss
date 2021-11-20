@@ -1,0 +1,496 @@
+/* Sidebar Shop */
+.sidebar.sidebar-shop {
+	margin-bottom: 57px;
+
+	.widget-title {
+		font-size: 18px;
+		margin-bottom: 18px;
+	}
+
+	.widget {
+		margin-bottom: 30px;
+
+		&.widget-box {
+			background-color: #f4f4f4;
+			padding: 31px 30px 27px 30px;
+			margin-bottom: 29px;
+
+			@media (min-width: $minmqmd) and (max-width: $maxmqlg) {
+				padding-top:25px;
+				padding-bottom:18px;
+			}
+
+			@media (max-width: $maxmqsm) {
+				padding-left: 15px;
+				padding: 25px 15px 20px 15px;
+			}
+
+			.widget-title {
+				margin-bottom: 24px;
+
+				@media (min-width: $minmqmd) and (max-width: $maxmqlg) {
+					margin-bottom: 14px;
+				}
+			}
+		}
+
+		&.widget-shop-filter,
+		&.widget-shop-category {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+
+	.btn-category,
+	.btn-filter {
+		display: inline-block;
+		font: 400 13px/1.5 $second-font-family;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #b8b8b8;
+		padding:2px 6px 2px 8px;
+		letter-spacing: 0.1em;
+		float: right;
+		margin-top: -2px;
+		transition: all 0.4s;
+
+		&:hover,
+		&:focus {
+			background-color: $accent-color;
+		}
+
+		i {
+			font-size:12px;
+			margin-left: 6px;
+			position: relative;
+			top: -1px;
+		}
+	}
+
+	ul,
+	.accordion {
+		text-transform: uppercase;
+
+		li {
+			position: relative;
+			padding: 5.5px 0;
+			margin-bottom:9px;
+
+			@media (min-width: $minmqmd) and (max-width: $maxmqlg) {
+				padding: 3px 0;
+				margin-bottom:5px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				font-size: 13px;
+				font-weight: 500;
+				line-height:1.5;
+				letter-spacing: 0.07em;
+				color: #525260;
+				transition: color 0.4s;
+
+				@media (min-width: $minmqmd) and (max-width: $maxmqlg) {
+					font-size: 12px;
+				}
+				
+				i {
+					margin-right: 10px;
+					color: #b8b8b8;
+					position: relative;
+					top: -1px;
+					transition: color 0.4s;
+				}
+
+				&:hover,
+				&:focus {
+					color: $primary-color;
+
+					i {
+						color: $primary-color;
+					}
+				}
+			}
+
+			&.active,
+			&.open {
+				> a {
+					color: $primary-color;
+					font-weight: 600;
+
+					i {
+						color: $primary-color;
+					}
+				}
+			}
+
+			ul {
+				margin: 0 0 0 8px;
+
+				li {
+					&:first-child {
+						padding-top: 23.5px;
+					}
+
+					&:last-child {
+						padding-bottom: 9.5px;
+					}
+				}
+			}
+		}
+	}
+	.filter-color-list {
+		padding-top: 7px;
+		margin-bottom: 10px;
+		li {
+			cursor: pointer;
+			margin:0 0 20px;
+			padding:0;
+		}
+	}
+
+	.accordion-btn {
+		position: absolute;
+		width: 22px;
+		height:22px;
+		z-index:10;
+		right: -6px;
+		top: 6px;
+		border:none;
+		outline: none;
+		padding: 0;
+		margin:0;
+		background-color: transparent;
+
+		&:after,
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left:50%;
+			top: 50%;
+			margin-top: -1px;
+			margin-left: -5px;
+			width: 10px;
+			height: 2px;
+			background-color: $primary-color;
+			transition: all 0.35s;
+			transform-origin: center center;
+		}
+
+		&.collapsed {
+			&:before {
+				transform: rotate(-90deg);
+			}
+
+			&:before,
+			&:after {
+				background-color: #a8a8b1;
+			}
+
+			&:hover,
+			&:focus {
+				&:after,
+				&:before {
+					background-color: $primary-color;
+				}
+			}
+		}
+	}
+
+	.filter-label {
+		padding: 6px 0;
+		margin: 0 0 9px;
+		font: 600 14px/1.5 $font-family;
+		letter-spacing: 0.07em;
+		color: $primary-color;
+		text-transform: uppercase;
+
+		.filter-price-text {
+			position: relative;
+			float: right;
+			bottom: -2px;
+			font-size:13px;
+			font-weight: 500;
+			color: #525260;
+			letter-spacing: 0.05em;
+		}
+	}
+
+	.price-slider-wrapper {
+		padding-top: 9px;
+		margin-bottom: 34px;
+	}
+
+	.btn.btn-apply {
+		font-size: 13px;
+		letter-spacing: 0.075em;
+		padding-top: 15px;
+		padding-bottom: 11px;
+		background-color: #fff;
+		border-color: lighten($accent-color, 35%); //f6e6d5
+		color: $accent-color;
+
+		&:hover,
+		&:focus {
+			background-color:$accent-color;
+			border-color: $accent-color;
+			color: #fff;
+		}
+	}
+
+	.filter-box {
+		margin-bottom: 30px;
+
+		.row {
+			margin:0 -4px;
+
+			[class*="col-"] {
+				padding:0 4px;
+			}
+		}
+	}
+
+	.widget-banner {
+		max-width: 270px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom:32px;
+
+		.banner {
+			margin-bottom: 0;
+		}
+	}
+
+	.widget-newsletter {
+		margin-bottom: 35px;
+
+		p {
+			line-height: 1.7;
+			margin-bottom: 29px;
+			color: #989898;
+		}
+
+		.form-group {
+			position: relative;
+			margin-bottom: 9px;
+
+			img {
+				position: absolute;
+				right: 16px;
+				top:50%;
+				margin-top: -5px;
+				z-index:3;
+			}
+		}
+
+		.form-control {
+			font-size: 12px;
+			letter-spacing: 0.05em;
+			padding: 14.5px 50px 12.5px 24px;
+			margin-bottom: 0;
+			height: 46px;
+
+			&:not(:focus) {
+				border-color: #e6e6e6;
+			}
+
+			&::placeholder {
+				color: #8b8b97;
+				text-transform: uppercase;
+			}
+		}
+
+		.btn {
+			font-size: 13px;
+			letter-spacing: 0.075em;
+			padding-top: 15px;
+			padding-bottom: 11px;
+			background-color: #fff;
+			border-color: lighten($accent-color, 35%); //f6e6d5
+			color: $accent-color;
+
+			&:hover,
+			&:focus {
+				background-color:$accent-color;
+				border-color: $accent-color;
+				color: #fff;
+			}
+		}
+	}
+
+	.widget-testimonial {
+		font-weight: 500;
+		line-height: 1.7;
+		padding: 26px 20px 29px;
+		background-color: #f4f4f4;
+
+		.testimonial {
+			text-align: center;
+
+			img {
+				display: inline-block;
+				max-width: 62px;
+				height: auto;
+				border-radius: 50%;
+				margin-bottom: 16px;
+			}
+
+			.testimonial-owner {
+				font-weight: 500;
+				line-height: 1.7;
+				font-size: 13px;
+				font-family: $font-family;
+				letter-spacing: 0.075em;
+				text-transform: uppercase;
+				margin-bottom: 0;
+			}
+
+			.testimonial-owner-position {
+				margin-bottom: 22px;
+			}
+
+			p {
+				max-width: 190px;
+				margin: 0 auto;
+				color: #989898;
+			}
+		}
+
+		.owl-dots {
+			line-height:1;
+			margin-top:25px;
+		}
+	}
+}
+
+.filter-color-list {
+	li {
+		cursor: pointer;
+		margin:0;
+		padding:0;
+		font-weight: 500;
+		color: #525260;
+		font-size:0;
+		transition: color 0.4s;
+
+
+		.filter-color {
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			margin-right: 16px;
+			vertical-align: middle;
+
+			@media (min-width: $minmqmd) and (max-width: $maxmqlg) {
+				margin-right:  8px;
+			}
+		}
+
+		.filter-color-text {
+			display: inline-block;
+			font-size: 13px;
+			line-height: 1 !important;
+			padding-top: 2px;
+			vertical-align: middle;
+			letter-spacing: 0.075em;
+
+			@media (min-width: $minmqmd) and (max-width: $maxmqlg) {
+				font-size: 10px;
+			}
+		}
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+/*! nouislider - 9.2.0 - 2017-01-11 10:35:35 */
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+	-webkit-touch-callout: none;
+	-ms-touch-action: none;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+.noUi-target {
+	position: relative;
+	direction: ltr;
+}
+.noUi-base {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	/* Fix 401 */
+}
+.noUi-connect {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+.noUi-origin {
+	position: absolute;
+	height: 0;
+	width: 0;
+}
+.noUi-handle {
+	position: relative;
+	z-index: 1;
+}
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+	transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+.noUi-base,
+.noUi-handle {
+	transform: translate3d(0, 0, 0);
+}
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+	height: 3px;
+}
+.noUi-horizontal .noUi-handle {
+	width: 12px;
+	height: 12px;
+	left: -6px;
+	top: -5px;
+}
+/* Styling */
+.noUi-base {
+	background: #d1d1d3;
+}
+.noUi-connect {
+	background: lighten($accent-color, 14.5%);
+	transition: background 450ms;
+}
+/* Handles and cursors */
+.noUi-draggable {
+	cursor: ew-resize;
+}
+.noUi-handle {
+	border-radius: 50%;
+	background: $primary-color;
+	cursor: default;
+}

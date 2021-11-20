@@ -1,0 +1,65 @@
+// Mixens - Buttons, Shadows etc...
+@mixin button($color, $background) {
+    background-color: $background;
+    border-color: $background;
+    color: $color;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &:active:focus,
+    &:active:hover,
+    &.active:focus,
+    &.active:hover,
+    .open > &.dropdown-toggle,
+    .open > &.dropdown-toggle:focus,
+    .open > &.dropdown-toggle:hover {
+      background-color: darken($background, 5%);
+      border-color: darken($background, 5%);
+      color: $color;
+    }
+
+  &.disabled,
+  &:disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        box-shadow: none;
+    }
+  }
+}
+
+@mixin button-outline($color, $bordercolor) {
+    color: $color;
+    background-color: transparent;
+    border-color: $bordercolor;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: $bordercolor;
+        border-color: $bordercolor;
+    }
+}
+
+// Radios
+@mixin radio-color($color, $opacity){
+    & ~ .check,
+    & ~ .circle {
+        opacity: $opacity;
+    }
+
+    & ~ .check {
+        background-color: $color;
+    }
+
+    & ~ .circle {
+        border-color: $color;
+    }
+}

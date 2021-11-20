@@ -1,0 +1,40 @@
+{
+  "name": "shopo",
+  "description": "The Closet",
+  "main": "index.js",
+  "authors": [
+    "Eon"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "bootstrap",
+    "shop",
+    "html5",
+    "css3"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "animate.css": "^3.5.2",
+    "fitvids": "^1.2.0",
+    "waypoints": "^4.0.1",
+    "owl.carousel": "owl-carousel2#^2.2.0",
+    "imagesloaded": "^4.1.1",
+    "metisMenu": "^2.7.0",
+    "font-awesome": "fontawesome#^4.7.0",
+    "isotope": "^3.0.3",
+    "jquery-countTo": "^1.2.0",
+    "bootstrap-touchspin": "^3.1.2",
+    "nouislider": "^9.2.0",
+    "xzoom": "^1.0.4"
+  }
+}

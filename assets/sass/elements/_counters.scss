@@ -1,0 +1,33 @@
+/* Counters */
+.count-container {
+	position: relative;
+	margin-bottom:30px;
+	min-height: 72px;
+	padding-top: 2px;
+
+	+ .count-container {
+		@media (min-width: $minmqsm) {
+			border-left: 1px solid #e3e4e8;
+		}
+	}
+}
+
+.count-title {
+	font-size:16px;
+	font-family: $font-family;
+	font-weight: 400;
+	margin-bottom: 0;
+	letter-spacing: 0;
+	margin-top: 5px;
+	color: #717179;
+}
+
+.count,
+.count-prefix {
+	display: inline-block;
+	color: $accent-color;
+	font-size: 46px;
+	line-height:1;
+	font-weight: 400;
+	margin-bottom: 0;
+}

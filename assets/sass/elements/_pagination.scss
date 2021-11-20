@@ -1,0 +1,135 @@
+/* Pagination & Pager */
+.pagination {
+	margin: 0 0 50px;
+
+    @media (min-width: $minmqsm) {
+        margin-bottom: 60px;
+    }
+
+    > li > a,
+    > li > span{
+        border: 1px solid transparent;
+        border-radius: 50% !important;
+        transition: all .3s;
+        padding: 0px 3px;
+        margin: 0 6px 0 0;
+        min-width: 36px;
+        height: 36px;
+        line-height: 36px;
+        color: #717179;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        background: transparent;
+        text-align: center;
+
+        @media (min-width: $minmqsm) {
+            margin-right: 12px;
+        }
+
+        i {
+        	line-height: inherit;
+        	font-size: 500;
+        }
+
+        &:hover,
+        &:focus{
+            color: $accent-color;
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+
+    > li:first-child:not(.active) {
+        > a,
+        > span {
+            min-width: 0;
+            padding-left:0;
+        }
+    }
+
+    > li.dots {
+        > span {
+            min-width: 0;
+            padding:0;
+        }
+    }
+
+    > .active > a,
+    > .active > span{
+        color: $primary-color;
+        border-color: $accent-color;
+
+        &,
+        &:focus,
+        &:hover{
+            background-color: transparent;
+            color: $primary-color;
+            border-color: $accent-color;
+        }
+
+    }
+}
+
+.pager {
+    margin: 0 0 20px;
+
+    li {
+        > a,
+        > span {
+            padding:5px 0;
+            background-color: transparent;
+            border:none;
+            color: $primary-color;
+            border-radius: 0;
+            box-shadow: none;
+            font-size:12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            transition: all 0.4s;
+        }
+
+        i {
+            font-size:24px;
+            margin-right: 10px;
+            vertical-align: middle;
+            margin-top: -5px;
+        }
+
+        > a:hover,
+        > a:focus {
+            color: $accent-color;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        &.next {
+            > a,
+            >span {
+                i {
+                    margin-right: 0;
+                    margin-left:10px;
+                }
+            }
+        }
+    }
+
+    .page-header & {
+        margin-top: 5px;
+        margin-bottom: 0;
+        @media (min-width: $minmqsm) {
+            margin-top: 0;
+            li {
+                position: absolute;
+                top: 32px;
+                left:0;
+
+                &.next {
+                    left: auto;
+                    right:0;
+                }
+            }
+        }
+    }
+}

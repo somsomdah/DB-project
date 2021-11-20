@@ -1,0 +1,61 @@
+//* Shopo Template SCSS Variables *//
+
+$font-family: 'Poppins', sans-serif !default;
+$second-font-family: 'Oswald', sans-serif !default;
+
+// Default Colors
+$primary-color:        #262634 !default;
+$accent-color:         #dc9831 !default;
+$primary-text-color:   #717179 !default;
+
+$primary-color-light:  #C5CAE9 !default;
+$primary-color-text:   #FFFFFF !default;
+
+$secondary-text-color: #757575 !default;
+
+$primary-heading-color: #212121 !default;
+$light-text-color: #5e5e65 !default;
+
+// Wrapper
+$wrapper-bg-color: #ffffff;
+
+// Body
+$body-font-size: 	13px !default;
+$body-line-height: 	2.15 !default;
+$body-bg-color: 	#f4f4f4 !default;
+
+$heading-color: $primary-color !default;
+
+$dark: 		#212121 !default;
+$darker: 	#121212 !default;
+
+$dark-bg: $dark !default;
+$darker-bg: $darker !default;
+
+$lightgray:	#eee !default;
+$gray: 		#bdbdbd !default;
+$gray2: 	#757575 !default;
+
+// Shadows
+$shadow-opacity: 0.2 !default;
+$shadow-half-opacity: 0.14 !default;
+$shadow-ambient-opacity: 0.12 !default;
+
+// Border Radius
+$border-radius-base: 4px;
+
+// Media Queries 
+// (Max - Min Media Queries - All related to the Bootstrap)
+// Max Media Queries
+$maxmqxss: 	360px !default;
+$maxmqxs: 	480px !default;
+$maxmqsm: 	767px !default;
+$maxmqmd: 	991px !default;
+$maxmqlg: 	1199px !default;
+
+// Min Media Queries
+$minmqxs: 	481px !default;
+$minmqsm: 	768px !default;
+$minmqmd: 	992px !default;
+$minmqlg: 	1200px !default;
+$minmqxlg: 	1600px !default;

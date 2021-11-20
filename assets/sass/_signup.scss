@@ -1,0 +1,16 @@
+/* Sing Up */
+.signup-form {
+	margin-bottom: 60px;
+
+	@media (min-width: $minmqsm) {
+		margin-bottom: 80px;
+	}
+
+	.radio-inline-container {
+		margin-bottom: 30px;
+		@media (min-width: $minmqsm) {
+			margin-top: 45px;
+			margin-bottom: 0;
+		}
+	}
+}

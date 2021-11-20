@@ -1,0 +1,165 @@
+body {
+	position: relative;
+	color: $primary-text-color;
+	font: 400 #{$body-font-size}/#{$body-line-height} $font-family;
+	background-color: $body-bg-color;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x:hidden;
+}
+
+#wrapper {
+	width: 100%;
+	background-color: $wrapper-bg-color;
+
+	&.boxed,
+	&.boxed-long {
+		max-width: 1240px;
+		box-shadow: -2px -2px 8px rgba(0, 0, 0,.15), 2px 2px 16px rgba(0, 0, 0,.3);
+	}
+
+	&.boxed {
+		@media (min-width: 1240px) {
+		margin:40px auto;
+
+		}
+	}
+
+	&.boxed-long {
+		margin: 0 auto;
+	}
+}
+
+
+.container {
+	@media (min-width: 1280px) {
+		width: 1200px;
+	}
+}
+// Additional helper class for mobile
+.col-xss-12 {
+	@media (max-width: $maxmqxs) { 
+		width:100%;
+		float:none;
+	}
+}
+
+.animated {
+	animation-duration: 0.5s;
+}
+
+::selection {
+	color:  #fff;
+    background-color: $primary-color;
+}
+
+iframe {
+	border: none;
+	outline: none;
+}
+
+pre {
+	border:none;
+	border-radius:0;
+	padding: 16px;
+	background-color: #fff;
+}
+ul,
+ol {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+a,
+select,
+input,
+textarea,
+button {
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+hr {
+	margin:25px 0;
+	border: none;
+	width:100%;
+	height:1px;
+	background-color: #e9e9ea;
+}
+
+.fullscreen {
+	min-height: 100vh;
+}
+
+.fullheight {
+	height: 100vh;
+}
+
+img.pull-right {
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+img.pull-left {
+	margin-right:20px;
+	margin-bottom:25px;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+// Helper Background Classes
+.bg-primary {
+	background-color: $primary-color !important;
+	color:#fff;
+}
+
+.bg-accent {
+	background-color: $accent-color !important;
+	color:#fff;
+}
+
+.bg-dark {
+	background-color: $dark-bg !important;
+	color:#fff;
+}
+
+.bg-darker {
+	background-color: $darker-bg !important;
+	color:#fff;
+}
+.bg-image,
+.parallax {
+	position: relative;
+	background-size:cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.parallax {
+	background-attachment: fixed;
+}
+
+.overlay-container {
+	position: relative;
+	
+	> .container,
+	> .container-fluid {
+		position: relative;
+		z-index:2;
+	}
+
+	.overlay {
+		position: absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		opacity: 0.45;
+		background-color: #000;
+		z-index:0;
+	}
+}

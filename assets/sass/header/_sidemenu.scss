@@ -1,0 +1,301 @@
+// Sidemenu / Mobilemenu
+.sidemenu {
+	width: 280px;
+	position: fixed;
+	left: 0;
+	top:0;
+	bottom:0;
+	height: 100vh;
+	z-index:1030;
+	box-shadow:2px 0 3px 0 rgba(0,0,0,.12);
+	transition: all 0.4s ease;
+	background-color: #fff;
+	transform: translateX(-290px);
+
+	@media (max-width: 320px) {
+		width: 250px;
+		transform: translateX(-260px);
+	}
+
+	.toggle-sidemenu & {
+		visibility: visible;
+		transform: translateX(0);
+	}
+
+	.sidemenu-wrapper {
+		position: relative;
+		height: 100%;
+	}
+
+	.sidemenu-header {
+		padding: 35px 20px 20px;
+		border-bottom: 1px solid #eaeced;
+		margin-bottom: 20px;
+	}
+
+	.sidemenu-logo {
+		display: inline-block;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.sidemenu-overlay {
+	position: fixed;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.4s ease;
+	z-index:1000;
+}
+
+.toggle-sidemenu {
+	.sidemenu {
+		transform: translateX(0);
+	}
+
+	.sidemenu-overlay {
+		visibility: visible;
+		opacity: 0.6;
+	}
+}
+
+/* Side Menu  - Metis menu */
+.metismenu {
+	margin: 0 0 15px;
+	li {
+		a {
+			display: block;
+			padding: 9px 20px;
+			font-size: 13px;
+			text-transform: uppercase;
+			font-weight: 400;
+			color: $primary-color;
+			letter-spacing: 0.05em;
+
+			> span {
+				position: relative;
+			}
+		}
+
+		&.active,
+		&:hover,
+		&:focus {
+			> a,
+			> a:hover,
+			> a:focus {
+				color: $primary-color;
+				background-color: $lightgray;
+
+				.sidemenu-icon {
+					&:before,
+					&:after {
+						background-color: $primary-color;
+					}
+				}
+			}
+		}
+
+		&.active {
+			> a {
+				font-weight: 600;
+			}
+		}
+
+		ul {
+			background-color: #f8f8f8;
+
+			li {
+				&:last-child {
+					border-bottom: 1px solid #eee;
+				}
+				a {
+					padding-left: 35px;
+					font-size:12px;
+				}
+			}
+		}
+	}
+	.collapse {
+		display: none;
+
+		&.in {
+			display: block;
+		}
+	}
+
+	.collapsing {
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		transition-timing-function: ease;
+		transition-duration: .35s;
+		transition-property: height, visibility;
+	}
+
+	.sidemenu-icon {
+		display:block;
+		position: relative;
+		float: right;
+		width: 10px;
+		height: 10px;
+		vertical-align: middle;
+		margin-top: 12px;
+
+		&:before,
+		&:after {
+			content:'';
+			position: absolute;
+			left:0;
+			top:0;
+			display:block;
+			transform-origin: center;
+			transition: all 0.4s ease;
+			background-color:#a8a8b1;
+			width:10px;
+			height:2px;
+			opacity:1;
+		}
+
+		&:after {
+			transform: rotate(90deg);
+		}
+	}
+
+	.active > a > .sidemenu-icon {
+		&:before {
+			opacity:0;
+		}
+
+		&:after {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+/* perfect-scrollbar v0.6.16 */
+.ps-container {
+	-ms-touch-action: auto;
+	touch-action: auto;
+	overflow: hidden !important;
+	-ms-overflow-style: none; 
+}
+  @supports (-ms-overflow-style: none) {
+    .ps-container {
+		overflow: auto !important; 
+  	} 
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.ps-container {
+		overflow: auto !important; 
+	} 
+  }
+
+.ps-container.ps-active-x > .ps-scrollbar-x-rail,
+.ps-container.ps-active-y > .ps-scrollbar-y-rail {
+    display: block;
+    background-color: transparent;
+ }
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+	background-color: #eee;
+	opacity: 0.9; 
+}
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+	background-color: #999;
+	height: 6px; 
+}
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+	background-color: #eee;
+	opacity: 0.9; 
+}
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+	background-color: #999;
+	width: 6px; 
+}
+.ps-container > .ps-scrollbar-x-rail {
+    display: none;
+	position: absolute;
+	opacity: 0;
+	transition: background-color .2s linear, opacity .2s linear;
+	bottom: 0px;
+	height: 9px; 
+}
+
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+	position: absolute;
+	background-color: #7e7e7e;
+	border-radius: 0;
+	transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;
+	bottom: 2px;
+  	height:3px; 
+}
+
+.ps-container > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x, .ps-container > .ps-scrollbar-x-rail:active > .ps-scrollbar-x {
+	height: 6px; 
+}
+
+.ps-container > .ps-scrollbar-y-rail {
+	display: none;
+	position: absolute;
+	opacity: 0;
+	right: 0;
+	width: 9px; 
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+	position: absolute;
+	background-color: #7e7e7e;
+	border-radius: 0;
+	transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;
+	right: 2px;
+	width: 3px; 
+}
+
+.ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y, .ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y {
+	width: 5px; 
+}
+
+.ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+	background-color: #eee;
+	opacity: 0.9; 
+}
+.ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+	background-color: #999;
+	height: 6px; 
+}
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+	background-color: #eee;
+	opacity: 0.9; 
+}
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+	background-color: #999;
+	width: 6px; 
+}
+.ps-container:hover > .ps-scrollbar-x-rail,
+.ps-container:hover > .ps-scrollbar-y-rail {
+	opacity: 0.8; 
+}
+.ps-container:hover > .ps-scrollbar-x-rail:hover {
+	background-color: #eee;
+	opacity: 0.8; 
+}
+.ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
+	background-color: #999; 
+}
+.ps-container:hover > .ps-scrollbar-y-rail:hover {
+	background-color: #eee;
+	opacity: 0.8; 
+}
+.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+	background-color: #999; 
+}

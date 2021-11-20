@@ -1,0 +1,124 @@
+/* 
+Shopo SCSS File 
+-------- # Table Of Contents # -------- //
+-------- 1-  General
+-------- 2-  Typography
+-------- 3-  Elements
+-------- 4-  Header
+-------- 5-  Home
+-------- 6-  About
+-------- 7-  Category
+-------- 8-  Product
+-------- 9-  Cart
+-------- 10- Checkout
+-------- 11- Portfolio
+-------- 12- Blog
+-------- 13- Contact
+-------- 14- Sign In-Sign Up
+-------- 15- 404
+-------- 16- Footer
+-------- 17- Owl Carousel
+-------- # Table Of Contents # ------- //
+*/
+
+@import 'mixins';
+@import 'variables';
+
+
+/* ----------- 1.General --------------
+--------------------------------------*/
+@import 'general';
+
+
+/* ----------- 2.Typography -----------
+--------------------------------------*/
+@import 'typography';
+
+
+/* ----------- 3.Elements -------------
+--------------------------------------*/
+@import 'elements/buttons';
+@import 'elements/forms';
+@import 'elements/tabs'; 
+@import 'elements/pageheaders';
+@import 'elements/breadcrumb';
+@import 'elements/pagination';
+@import 'elements/counters'; 
+@import 'elements/tables';
+@import 'elements/touchspin';
+
+
+/* ----------- 4.Header ---------------
+--------------------------------------*/
+@import 'header/header';
+@import 'header/sidemenu';
+@import 'header/sticky-header';
+
+
+/* ----------- 5.Home --------------
+--------------------------------------*/
+@import 'home';
+
+
+/* ----------- 6.About -----------------
+--------------------------------------*/
+@import 'about';
+
+
+/* ----------- 7.Category --------------
+--------------------------------------*/
+@import 'category';
+@import 'sidebar-shop';
+
+
+/* ----------- 8.Product --------------
+--------------------------------------*/
+@import 'product';
+
+
+/* ----------- 9.Cart --------------
+--------------------------------------*/
+@import 'cart';
+
+
+/* ----------- 10.Checkout --------------
+--------------------------------------*/
+@import 'checkout';
+
+
+/* ----------- 11.Portfolio -------------
+--------------------------------------*/
+@import 'portfolio';
+
+
+/* ----------- 12.Blog -----------------
+--------------------------------------*/
+@import 'blog';
+@import 'sidebar';
+
+
+/* ----------- 13.Contact --------------
+--------------------------------------*/
+@import 'contact';
+
+
+/* --------- 14.Sign In-Sign Up ---------
+--------------------------------------*/
+@import 'signin';
+@import 'signup';
+
+
+/* ----------- 15.404 -----------------
+--------------------------------------*/
+@import '404';
+
+
+/* ----------- 16.Footer ---------------
+--------------------------------------*/
+@import 'footer';
+@import 'scroll-top';
+
+
+/* ----------- 17.Owl Carousel ---------
+--------------------------------------*/
+@import 'owl-carousel';

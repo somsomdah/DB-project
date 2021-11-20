@@ -1,0 +1,39 @@
+
+/* -------- Scroll Top Button  -------*/
+#scroll-top {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	display: block;
+	text-align: center;
+	visibility: hidden;
+	cursor: pointer;
+	z-index: 999;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 22px;
+	opacity:0;
+	color: #fff;
+	background-color: $accent-color;
+	transition: all 0.4s;
+	transform: translateY(50px);
+
+	&.fixed {
+		opacity:1;
+		visibility:visible;
+		transform: translateY(0);
+	}
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: darken($accent-color, 5%);
+	}
+
+	@media (max-width: $maxmqsm) {
+		display:none;
+		visibility:hidden;
+		opacity:0;
+	}
+}

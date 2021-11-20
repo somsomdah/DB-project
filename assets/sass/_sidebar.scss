@@ -1,0 +1,144 @@
+/* Sidebar */
+.sidebar {
+	.widget {
+		margin-bottom: 42px;
+
+		&.widget-posts {
+			margin-bottom: 50px;;
+		}
+	}
+
+	.widget-title {
+		color: $primary-color;
+		font-size: 16px;
+		letter-spacing: 0.075em;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+	}
+
+	.search-form {
+		position: relative;
+		.form-control {
+			padding:16px 45px 14px 23px;
+			height: 50px;
+			font-size: 13px;
+		}
+
+		.btn {
+			background-color: transparent;
+			border:none;
+			position: absolute;
+			right:1px;
+			top:0;
+			padding: 16px 15px 12px;
+			color: $primary-color;
+			font-size: 14px;
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				color: $accent-color;
+			}
+		}
+	}
+
+	.posts-list {
+		li {
+			margin-bottom: 30px;
+
+			figure {
+				float: left;
+				max-width: 100px;
+				margin-right: 16px;
+
+				a {
+					display: block;
+				}
+
+				img {
+					display: block;
+					max-width: 100%;
+					height: 100%;
+				}
+			}
+
+			h4 {
+				font-weight: 500;
+				font-size:14px;
+				font-family: $font-family;
+				letter-spacing: -0.01em;
+				line-height: 1.55;
+				padding-top: 11px;
+				margin-bottom: 0;
+
+				a {
+					color: #20202f;
+
+					&:hover,
+					&:focus {
+						color: $accent-color;
+					}
+				}
+			}
+
+			&:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+	}
+
+	.category-list {
+		margin-top:-3px;
+
+		li {
+			position: relative;
+			margin-bottom: 9px;
+			padding-bottom:4px;
+
+			&:last-child {
+				margin-bottom:0;
+			}
+
+			a {
+				color: $primary-text-color;
+
+				&:hover,
+				&:focus {
+					color: $accent-color;
+				}
+			}
+		}
+	}
+
+	.tagcloud {
+		a {
+			font-size: 13px;
+			line-height: 1.7;
+			display: block;
+			float:left;
+			padding: 14px 25px 12px;
+			background-color: transparent;
+			border: 1px solid #e4e7eb;
+			color: #20202f;
+			margin:0 10px 10px 0;
+			letter-spacing: -0.01em;
+			transition: all 0.45s;
+			border-radius: 0;
+
+			&:hover,
+			&:focus {
+				background-color: $primary-color;
+				border-color: $primary-color;
+				color:#fff;
+			}
+		}
+
+		&:after {
+			content:'';
+			display:table;
+			clear:both;
+		}
+	}
+}

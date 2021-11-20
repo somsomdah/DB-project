@@ -1,0 +1,172 @@
+/* Typography */
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
+	font-weight: 400;
+	font-family: $second-font-family, Arial, sans-serif;
+	line-height:1.1;
+	color: $heading-color;
+	margin-top:0;
+	margin-bottom: 20px;
+	letter-spacing: 0.075em;
+
+	small {
+		color: inherit;
+	}
+}
+
+h1,.h1 {
+	font-size: 26px;
+} 
+
+h2,.h2{
+	font-size: 20px;
+}
+
+h3,.h3 {
+	font-size: 18px;
+}
+
+h4,.h4 {
+	font-size: 16px;
+}
+
+h5,.h5 {
+	font-size: 14px;
+}
+
+h6,.h6 {
+	font-size: 12px;
+}
+
+a {
+	position: relative;
+	color: $primary-color;
+	transition: color 0.4s;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+		text-decoration:none;
+	}
+}
+
+.title-group {
+	margin-bottom: 25px;
+
+	.title {
+		font-family: $second-font-family;
+		font-size: 20px;
+		line-height:1.38;
+		font-weight: 400;
+		color: $primary-color;
+		margin:0;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+
+		&.big {
+			font-size: 26px;
+			margin-bottom: 2px;
+		}
+	}
+
+	.title-desc {
+		font-size: 13px;
+		color: $primary-text-color;
+		font-weight: 400;
+		line-height:1.84;
+		margin:0;
+		letter-spacing: 0.05em;
+	}
+}
+
+.carousel-title {
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+.lead {
+	font-size: 15px;
+	font-weight: inherit;
+	line-height: 1.67;
+	max-width: none;
+	margin:0 auto 20px;
+	color: $primary-text-color;
+	font-weight: 400;
+
+	@media (min-width: $minmqmd) {
+		margin-bottom: 30px;
+	}
+}
+
+.text-custom,
+.text-primary {
+	color: $primary-color !important;
+}
+
+.text-custom2,
+.text-accent {
+	color: $accent-color !important;
+}
+
+.text-white {
+	color: #fff !important;
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		color: inherit;
+	}
+}
+
+.text-muted {
+	color: #777 !important;
+}
+
+.text-light {
+	font-weight:300 !important;
+}
+
+.text-spaced {
+	letter-spacing: 0.05em;
+}
+
+.text-lineth {
+	text-decoration: line-through;
+}
+
+.text-underline {
+	text-decoration: underline;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.text-semibold {
+	font-weight: 500;
+}
+
+blockquote {
+	position: relative;
+	padding:5px 0 5px 35px;
+	margin: 20px 0;
+	font-size:16px;
+	border-left:2px solid transparent;
+}
+
+blockquote p {
+	margin-bottom:12px;
+}
+
+blockquote cite {
+	font-size:16px;
+	font-weight: 400;
+}
