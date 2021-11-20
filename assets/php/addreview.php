@@ -11,7 +11,9 @@ $content = $_POST["content"];
 $user_id = $_SESSION['id'];
 $user_email = $_SESSION['email'];
 $time = date( 'Y-m-d H:i:s' );
-
+if (!$user_id){
+    echo "<script> alert('Please login first.'); location.href = '".$_SERVER['HTTP_REFERER']."' </script>";
+}
 $query = sprintf("select * from Purchase where product_id=%d and user_id=%d", $product_id, $user_id);
 $res = mysqli_query($dbconn, $query);
 if ($res){
