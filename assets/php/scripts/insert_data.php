@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("team03.cvyixfqgvhyn.ap-northeast-2.rds.amazonaws.com", "team03", "team0303", "team03");
+include "../../db/connect.php";
 
 if (mysqli_connect_errno()){
     printf("Connection failed: %s <br/>", mysqli_connect_error());
@@ -23,13 +23,13 @@ else{
 
         // printf($query);
 
-        $res = mysqli_query($db,$query);
+        $res = mysqli_query($dbconn,$query);
         if($res){
             printf("success ".$i." <br/>");
             
         }else{
-            printf(mysqli_error($db)."<br/>");
+            printf(mysqli_error($dbconn)."<br/>");
         }
     }
-    mysqli_close($db);
+    mysqli_close($dbconn);
 }

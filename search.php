@@ -33,7 +33,7 @@
         <div id="wrapper">
 
             <?php
-                include './header.php';
+                include './components/header.php';
             ?>
             
             <div class="main">
@@ -100,7 +100,7 @@
                 </div><!-- End .container -->
             </div><!-- End .main -->
             
-            <?php include "./footer.php"; ?>
+            <?php include "./components/footer.php"; ?>
         </div><!-- End #wrapper -->
         
         <a id="scroll-top" href="#top" title="Scroll top"><i class="fa fa-angle-up"></i></a>

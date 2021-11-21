@@ -26,7 +26,7 @@
     <body>
         <div id="wrapper">
             <?php
-                include './header.php';
+                include './components/header.php';
             ?>
             
             <div class="main">
@@ -84,13 +84,13 @@
                             </form>
                         </div><!-- End .col-md-9 -->
 
-                        <?php include "./sidemenu.php"; ?>
+                        <?php include "./components/sidemenu.php"; ?>
 
                     </div><!-- End .row -->
                 </div><!-- End .container -->
             </div><!-- End .main -->
             
-            <?php include "./footer.php"; ?>
+            <?php include "./components/footer.php"; ?>
         </div><!-- End #wrapper -->
         
         <a id="scroll-top" href="#top" title="Scroll top"><i class="fa fa-angle-up"></i></a>
