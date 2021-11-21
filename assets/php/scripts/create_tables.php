@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("team03.cvyixfqgvhyn.ap-northeast-2.rds.amazonaws.com", "team03", "team0303", "team03");
+include "../../db/connect.php";
 
 if (mysqli_connect_errno()){
     printf("Connection failed: %s <br/>", mysqli_connect_error());
@@ -57,14 +57,14 @@ else{
     )";
 
     for($i=0; $i<5; $i++){
-        $res = mysqli_query($db, $query[$i]);
+        $res = mysqli_query($dbconn, $query[$i]);
         if ($res===TRUE){
             printf("table ".$i." created <br/>");
         }else{
-            printf("error creating table".$i.": ".mysqli_error($db)." <br/>");
+            printf("error creating table".$i.": ".mysqli_error($dbconn)." <br/>");
         }
     }
 
-    mysqli_close($db);
+    mysqli_close($dbconn);
 
 }

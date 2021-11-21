@@ -1,6 +1,6 @@
 <?php
 
-include "../db/connect.php";
+include "../../db/connect.php";
 
 if (mysqli_connect_errno()){
     printf("Connection failed: %s <br/>", mysqli_connect_error());
